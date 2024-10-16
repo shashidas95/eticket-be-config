@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: shashidas/eticket-be:21
+          image: shashidas/eticket-be:10
           ports:
             - containerPort: 7001

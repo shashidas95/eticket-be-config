@@ -29,7 +29,7 @@ pipeline {
             steps {
                 sh 'cat ./k8s/deployment.yaml'
                 // Update the deployment file with the new IMAGE_TAG
-                sh "sed -i.bak 's#image: ${APP_NAME}:.*#image: ${APP_NAME}:${IMAGE_TAG}#' ./k8s/deployment.yaml"
+                sh "sed -i 's#image: ${APP_NAME}:.*#image: ${APP_NAME}:${IMAGE_TAG}#' ./k8s/deployment.yaml"
                 sh 'cat ./k8s/deployment.yaml'
 
                 // Configure Git
